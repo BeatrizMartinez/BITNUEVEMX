@@ -1,0 +1,15 @@
+<span id="cal-slide-tick" style="display: none"></span>
+<div id="cal-slide-content" class="cal-event-list">
+    <ul class="unstyled list-unstyled">
+        <% _.each(events, function(event) { %>
+            <li>                           
+                <p> 
+                    <img src=" <%= event.image %>" alt="" class="img-rounded" style="width: 50px; height:50px;">&nbsp;
+                    <a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-classFondo="<%= event.classFondo %>" data-event-id="<%= event.id %>" style="font-size: 14px; color: #3071a9; font-family: cursive;">                        
+                        <%= event.title %>
+                    </a>
+                </p>
+            </li>
+	<% }) %>
+    </ul>
+</div>

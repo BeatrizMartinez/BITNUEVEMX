@@ -1,0 +1,15 @@
+<div class="cal-month-day <%= cls %>">
+    <span class="pull-right" data-cal-date="<%= data_day %>" data-cal-view="day" data-toggle="tooltip" title="<%= tooltip %>"><%= day %></span>
+	<% if (events.length > 0) { %>
+        <div class="events-list" data-cal-start="<%= start %>" data-cal-end="<%= end %>">
+            <% _.each(events, function(event) { %>
+            <a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>" data-event-cla="<%= event['image'] %>" data-event-class="<%= event['class'] %>"  
+               class="pull-left event"
+               title="<%= event.title %>">
+                <img src=" <%= event.image %>" alt="" class="img-rounded" style="width: 25px; height:25px; border: 1px solid #428bca;">                
+            </a>
+                
+            <% }); %>
+        </div>
+    <% } %>
+</div>

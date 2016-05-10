@@ -1,0 +1,11 @@
+<% _.each(events, function(event){ %>
+<div class="cal-row-fluid">
+	<div class="cal-cell<%= event.days%> cal-offset<%= event.start_day %> day-highlight dh-<%= event['class'] %>" data-event-class="<%= event['class'] %>" data-event-classFondo="<%= event.classFondo %>">
+		<!--<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>" class="cal-event-week event<%= event.id %>"><%= event.title %></a>-->
+                <p><img src=" <%= event.image %>" alt="" class="img-rounded" style="width: 50px; height:50px;">
+                    <a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-classFondo="<%= event.classFondo %>" data-event-id="<%= event.id %>">                                        
+                    <%= event.title %>
+                </a></p>                
+	</div>
+</div>
+<% }); %>
